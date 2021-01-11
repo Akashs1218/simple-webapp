@@ -63,13 +63,15 @@ nodeSelector: {}
 
 tolerations: []
 
-mysql:
+mysql1:
   MYSQL_DATABASE_USER: 'db_user'
   MYSQL_DATABASE_PASSWORD: 'Passw0rd'
   MYSQL_DATABASE_DB: 'employee_db'
-  MYSQL_DATABASE_HOST: python-app-v1-mysql-chart
+  MYSQL_DATABASE_HOST: myapp-mysql
 
-mysql-python: 
-  - mysqlUser: db_user
-  - mysqlPassword: Passw0rd
+mysql: 
+  mysqlUser: "db_user"
+  mysqlPassword: "Passw0rd"
+  mysqlDatabase: "employee_db" 
+  mysqlAllowEmptyPassword: true
 affinity: {}

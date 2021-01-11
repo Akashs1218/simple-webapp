@@ -33,13 +33,13 @@ spec:
               protocol: TCP
           env:
             - name: MYSQL_DATABASE_USER 
-              value: {{ .Values.mysql.MYSQL_DATABASE_USER }}
+              value: {{ .Values.mysql1.MYSQL_DATABASE_USER }}
             - name: MYSQL_DATABASE_PASSWORD
-              value: {{ .Values.mysql.MYSQL_DATABASE_PASSWORD }}
+              value: {{ .Values.mysql1.MYSQL_DATABASE_PASSWORD }}
             - name: MYSQL_DATABASE_DB
-              value: {{ .Values.mysql.MYSQL_DATABASE_DB }}
+              value: {{ .Values.mysql1.MYSQL_DATABASE_DB }}
             - name: MYSQL_DATABASE_HOST
-              value: {{ .Values.mysql.MYSQL_DATABASE_HOST }}
+              value: {{ .Values.mysql1.MYSQL_DATABASE_HOST }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
